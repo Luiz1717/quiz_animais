@@ -1,4 +1,4 @@
-name: quizanimais
+name: Flutter CI
 
 on:
   push:
