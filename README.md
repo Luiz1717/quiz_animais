@@ -1,16 +1,8 @@
 # quizanimais
 
-A new Flutter project.
+Desenvolvi um trabalho da DEVOPS com a projeto de quiz da animais, criado em Flutter.
 
-## Getting Started
+Implementei testes unitários em Dart para verificar se a lógica do quiz está funcionando corretamente, incluindo a pontuação e o avanço das perguntas.
 
-This project is a starting point for a Flutter application.
+Além disso, configurei uma esteira de integração contínua (CI) utilizando o GitHub Actions e o Codemagic, que executa automaticamente os testes sempre que há alterações no repositório.
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
