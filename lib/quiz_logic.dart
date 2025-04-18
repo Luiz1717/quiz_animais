@@ -2,14 +2,14 @@ class QuizQuestion {
   final String question;
   final List<String> options;
   final int correctIndex;
+  final String imageAsset;
 
   QuizQuestion({
     required this.question,
     required this.options,
     required this.correctIndex,
+    required this.imageAsset,
   });
-
-  bool isCorrect(int index) => index == correctIndex;
 }
 
 class QuizLogic {
@@ -20,19 +20,16 @@ class QuizLogic {
   QuizLogic(this._questions);
 
   QuizQuestion get currentQuestion => _questions[_currentQuestionIndex];
-
-  bool get isFinished => _currentQuestionIndex >= _questions.length;
-  int get score => _score;
-  int get totalQuestions => _questions.length;
   int get currentIndex => _currentQuestionIndex;
+  int get totalQuestions => _questions.length;
+  int get score => _score;
+  bool get isFinished => _currentQuestionIndex >= _questions.length;
 
   void answer(int selectedIndex) {
-    if (!isFinished) {
-      if (currentQuestion.isCorrect(selectedIndex)) {
-        _score++;
-      }
-      _currentQuestionIndex++;
+    if (!isFinished && selectedIndex == currentQuestion.correctIndex) {
+      _score++;
     }
+    _currentQuestionIndex++;
   }
 
   void reset() {
